@@ -1,0 +1,11 @@
+
+
+
+
+Note that this version of the SWB2 model runs off of a fixed cell size. (100 m).
+The cell size can be adjusted, and the input data inspected by looking at the releases tab on the ASPA-UH_Integrated_Modeling_Framework page
+
+There is the SWB2_imput_file_generation.zip with all of the GIS data used to create input datasets, and the creation of these datasets, including the model cell size resolution can be modified 
+
+This can be used by downloading and opening up the zip, it will run just like any other repository and will generate an input folder with input grids to be used in the SWB2 model. This whole folder can then be used to replace the input folder in the SWB2 model and it will automatically make all adjustmentes needed to run the model at the new cell size. 
+(note that the GIS files contain some items that are larger than 100 mb, thus the reason it needs to be posted as a release and not as part of the model
