@@ -1,0 +1,17 @@
+name: ASPA_Framework
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - matplotlib
+  - pandas
+  - scipy
+  - notebook 
+  - gdal
+  - netCDF4
+  - re
+  - flopy
+  - rasterio
+  - fiona
+  - pyshp
