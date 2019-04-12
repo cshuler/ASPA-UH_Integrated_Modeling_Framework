@@ -1,0 +1,12 @@
+Start,End,Station,Param,Notes,How_detected
+8/24/2015 20:00,11/4/2015 10:00,Vaipito,All,,Data inspection
+5/17/2016 12:00,5/18/2016 20:00,Vaipito,All,,Data inspection
+10/3/2015 13:00,1/11/2016 17:30,Poloa,RNF_in,rain bucket clogged,Data inspection and noted on sheets
+7/19/2016 22:00,8/16/2016 10:00,Poloa,WNS_mph,,Data inspection
+6/1/2017 1:00,1/1/2019 1:00,Fagaitua,RNF_in,,Data inspection
+6/19/2016 15:00,4/21/2017 6:00,Alava,RNF_in,,Data inspection
+6/14/2016 9:30,7/1/2016 13:00,Aasu,WNS_mph,,Data inspection
+1/3/2016 17:00,4/6/2016 12:00,Alava,TMP_F,Ant invasion?,Data inspection
+1/3/2016 17:00,4/6/2016 12:00,Alava,HMD_pct,Ant invasion?,Data inspection
+12/31/2015,3/8/2016 12:00,Alava,RNF_in,bucket clogged,Data inspection
+4/5/2016 10:00,4/7/2016 15:00,Poloa,All,Station removed,notes
