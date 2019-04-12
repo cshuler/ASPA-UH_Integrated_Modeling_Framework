@@ -1,0 +1,14 @@
+name: ASPA_FloPy
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - matplotlib
+  - pandas
+  - flopy
+  - scipy
+  - notebook 
+  - rasterio
+  - fiona
+  - pyshp
