@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20190412</CreaDate><CreaTime>10054400</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Conversion Tools.tbx\RasterToASCII" Date="20190412" Time="100544">RasterToASCII ..\input/Gridded_temps\file_plus.tif ..\input\Gridded_temps\PRISM_tmin_tutuila_30yr_normal_09.asc</Process></lineage></DataProperties></Esri></metadata>
