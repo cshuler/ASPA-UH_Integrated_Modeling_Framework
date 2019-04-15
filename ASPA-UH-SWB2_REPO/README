@@ -2,7 +2,20 @@
 
 
 ## Abstract
-A water budget approach using SWB2, a soil water-balance model, was applied to the island of Tutuila in American Samoa. The primary objective for the model was to calculate spatially and temporally distributed net-infiltration, which directly controls groundwater recharge rate. This information is essential for assessing water resources availability on islands such as Tutuila where groundwater makes up the majority of drinking and municipal water supplies. Other water budget components such as evapotranspiration, canopy interception, runoff, and mountain front recharge were also quantified with the SWB2 model for average present-day climate conditions. Additionally, the potential effects of future climate change on water resources availability were simulated by integrating dynamically downscaled climate predictions for 2080 to 2099 derived from externally supplied global climate model results. Notable improvements in this model over previously developed Tutuila water budget models include flow-routing based on land topography, inclusion of the mountain front recharge process, and consideration of direct net infiltration from anthropogenic sources such as on-site wastewater units and leaking water delivery lines. Model results indicated approximately 54% of Tutuila’s rainfall infiltrates as groundwater recharge, 8% is lost to canopy evaporation, another 15% is lost to evapotranspiration from soils, and 21% is removed through surface water features as stormflow-runoff. The model was able to simulate these processes with a high-spatial and temporal resolution with a 20 by 20 m grid-cell size, and a daily-resolution output time step. Climate scenarios suggested an increase in net-infiltration of 17 to 27% may be expected by the end of the century depending on the emissions scenario used.
+A water budget approach using SWB2, a soil water-balance model, was applied to the island of Tutuila in American Samoa. The primary 
+objective for the model was to calculate spatially and temporally distributed net-infiltration, which directly controls groundwater 
+recharge rate. This information is essential for assessing water resources availability on islands such as Tutuila where groundwater 
+makes up the majority of drinking and municipal water supplies. Other water budget components such as evapotranspiration, canopy 
+interception, runoff, and mountain front recharge were also quantified with the SWB2 model for average present-day climate conditions. 
+Additionally, the potential effects of future climate change on water resources availability were simulated by integrating dynamically 
+downscaled climate predictions for 2080 to 2099 derived from externally supplied global climate model results. Notable improvements in 
+this model over previously developed Tutuila water budget models include flow-routing based on land topography, inclusion of the mountain 
+front recharge process, and consideration of direct net infiltration from anthropogenic sources such as on-site wastewater units and 
+leaking water delivery lines. Model results indicated approximately 54% of Tutuila’s rainfall infiltrates as groundwater recharge, 8% is 
+lost to canopy evaporation, another 15% is lost to evapotranspiration from soils, and 21% is removed through surface water features as 
+stormflow-runoff. The model was able to simulate these processes with a high-spatial and temporal resolution with a 20 by 20 m grid-cell 
+size, and a daily-resolution output time step. Climate scenarios suggested an increase in net-infiltration of 17 to 27% may be expected by
+ the end of the century depending on the emissions scenario used.
 
 
 
