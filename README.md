@@ -25,6 +25,6 @@ The framework has four descrete components:
 ........................................................................................................................................................................................
 
 
-![alt text](https://github.com/cshuler/ASPA-UH_Integrated_Modeling_Framework/blob/master/Framework_Schematic1.jpg)
+![alt text](docs/Framework_Schematic1.jpg)
 
 Scematic of the collaborative modeling framework coponents
