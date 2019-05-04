@@ -25,6 +25,6 @@ The framework has four descrete components:
 ........................................................................................................................................................................................
 
 
-![alt text](docs/Framework_Schematic1.jpg)
+![alt text](Docs/Framework_Schematic1.jpg)
 
 Scematic of the collaborative modeling framework coponents
