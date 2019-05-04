@@ -13,7 +13,13 @@ merge the fields of data-science and hydrology. This modeling framework applies 
 
 We refer to this framework as vertically integrated because it includes a diverse chain of modular components extending from the direct collection and processing of basic hydrologic parameters, through to the development of a dynamic regional groundwater model.
 
-THe process is broken into four descrete components: 
-1: processing raw 
+The framework has four descrete components: 
+1: ASPA-UH_Wx_Sub-REPO contains data and code for processing and QA/Qc-ing raw weather station data
+2: ASPA-UH_Stream_Sub-REPO contains data and code for processing, QA/Qc-ing, and automatically developing and updating rating curves from raw streamflow data
+3: ASPA-UH-SWB2_REPO contains the needed data and code to run the Tutuila SWB2 water budget model
+4: ASPA-UH-Flopy_REPO contains files and code to run MODFLOW based groundwater models using the data generated within other components of this framework
+
+.............................................................................................................................
+
 
 ![alt text](https://github.com/cshuler/ASPA-UH_Integrated_Modeling_Framework/blob/master/Framework_Schematic1.jpg)
