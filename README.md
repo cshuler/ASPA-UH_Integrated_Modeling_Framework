@@ -16,4 +16,4 @@ We refer to this framework as vertically integrated because it includes a divers
 THe process is broken into four descrete components: 
 1: processing raw 
 
-[Contribution guidelines for this project](https://github.com/cshuler/ASPA-UH_Integrated_Modeling_Framework/blob/master/Framework_Schematic1.jpg)
+![alt text](https://github.com/cshuler/ASPA-UH_Integrated_Modeling_Framework/blob/master/Framework_Schematic1.jpg)
