@@ -16,7 +16,7 @@ The framework has four descrete components:
 
 4: ASPA-UH-Flopy_REPO contains files and code to run MODFLOW based groundwater models using the data generated within other components of this framework
 
-........................................................................................................................................................................................
+.............................................................................................................................................................................................................................................
 
 <p align="center">
   <img width="560" height="300" src=Docs/Framework_Schematic1.jpg >
