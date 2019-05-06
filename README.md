@@ -18,8 +18,11 @@ The framework has four descrete components:
 
 ........................................................................................................................................................................................
 
-
+<p align="center">
 ![alt text](Docs/Framework_Schematic1.jpg)
+</p>
+
+
 
 Schematic of data and modeling workflow for the ASPA-UH-WRRC collaborative modeling framework. Datasets or geospatial layer components are shown in quadrilaterals, code-based processes are contained in ovals, and external model executables are contained in triangles, which are themselves within ovals since they are run as Python sub-processes.
 
