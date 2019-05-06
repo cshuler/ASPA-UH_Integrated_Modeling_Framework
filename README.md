@@ -19,7 +19,11 @@ The framework has four descrete components:
 ........................................................................................................................................................................................
 
 <p align="center">
-![alt text](Docs/Framework_Schematic1.jpg)
+  <img width="460" height="300" src=Docs/Framework_Schematic1.jpg >
+</p>
+
+<p align="center">
+![alt text](
 </p>
 
 
