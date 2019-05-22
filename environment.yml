@@ -10,7 +10,6 @@ dependencies:
   - notebook 
   - gdal
   - netCDF4
-  - re
   - flopy
   - rasterio
   - fiona
