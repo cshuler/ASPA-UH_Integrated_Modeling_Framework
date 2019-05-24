@@ -14,3 +14,4 @@ dependencies:
   - rasterio
   - fiona
   - pyshp
+  - scikit-learn
