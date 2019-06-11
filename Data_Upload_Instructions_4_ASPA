@@ -60,7 +60,7 @@ The current options are:
 
 
 
-A note on if you ever use a new HOBOWARE program, and the factory settings are checked you need to change the file export properties to make sure files are exported in a way that works see directions below:
+A note on if you ever reinstall HOBOWARE, and the factory settings are checked you need to change the file export properties to make sure files are exported in a way that works see directions below:
 
 
 change streamflow hoboware Preferances
