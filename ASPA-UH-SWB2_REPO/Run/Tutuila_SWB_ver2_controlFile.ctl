@@ -54,8 +54,8 @@ PRECIPITATION ARC_GRID ../input/Gridded_rain/prism_ppt_tutuila_30yr_normal_%0m.a
 PRECIPITATION_GRID_PROJECTION_DEFINITION +proj=utm +zone=2 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs 
 
 
-FRAGMENTS_DAILY_FILE ../input/Rainfall_fragments_1.prn
-FRAGMENTS_SEQUENCE_FILE ../input/Sequence_file_1.prn
+FRAGMENTS_DAILY_FILE ../dynamic_inputs/Rainfall_fragments/Rainfall_fragments_3.prn
+FRAGMENTS_SEQUENCE_FILE ../dynamic_inputs/Rainfall_fragments/Sequence_file_3.prn
 FRAGMENTS_SEQUENCE_SIMULATION_NUMBER 1
 
 RAINFALL_ZONE ARC_GRID ../input/Rain_stations/tp_grid.asc
