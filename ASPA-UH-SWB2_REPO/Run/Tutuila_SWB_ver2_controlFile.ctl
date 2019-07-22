@@ -144,7 +144,7 @@ EVAPORATION_TO_RAINFALL_RATIO_PROJECTION_DEFINITION +proj=utm +zone=2 +south +el
 RUNOFF_ZONE ARC_GRID ../input/Runoff_zones_WS/ro_rast.asc
 RUNOFF_ZONE_PROJECTION_DEFINITION +proj=utm +zone=2 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs 
  
-RUNOFF_RATIO_MONTHLY_FILE ../input/RO_Rf_ratios_real_monthly3.txt
+RUNOFF_RATIO_MONTHLY_FILE ../dynamic_inputs/RO_Rf_Ratios_Dynamic/RO_Rf_ratios_Dynamic_monthly_2000_2011.txt
 
 PERCENT_PERVIOUS_COVER ARC_GRID ../input/Land_use_Soils_data/ppervras.asc
 PERCENT_PERVIOUS_COVER_PROJECTION_DEFINITION +proj=utm +zone=2 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs 
