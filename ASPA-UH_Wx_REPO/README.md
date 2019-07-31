@@ -3,11 +3,7 @@ This repository is the cloud-home of the UH-ASPA weather station project, which 
 
 If you are interested in downloading consolidated QA/QCed weather station data please see this link: 
 
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
-
-
-
-
+[Processed Weather Station Data](workspace/QA_All_merged.csv)
 
 
 The script below is designed to process weather station data from 6 full weather stations and one solar radiation station on Tutuila into useful information. For metadata and all other available information regarding these stations please see the Docs folder in this repository.
