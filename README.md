@@ -8,19 +8,19 @@ We refer to this framework as vertically integrated because it includes a divers
 
 The framework has four descrete components: 
 
-1: ASPA-UH_Wx_Sub-REPO contains data and code for processing and QA/Qc-ing raw weather station data
+#### 1: ASPA-UH_Wx_Sub-REPO contains data and code for processing and QA/Qc-ing raw weather station data
 
 [Download Processed Weather Station Data (click "view raw")](ASPA-UH_Wx_REPO/workspace/QA_All_merged.csv)
 
-2: ASPA-UH_Stream_Sub-REPO contains data and code for processing, QA/Qc-ing, and automatically developing and updating rating curves from raw streamflow data
+#### 2: ASPA-UH_Stream_Sub-REPO contains data and code for processing, QA/Qc-ing, and automatically developing and updating rating curves from raw streamflow data
 
 [Download Processed Streamflow Data](ASPA-UH_Stream_REPO/workspace)
 
-3: ASPA-UH-SWB2_REPO contains the needed data and code to run the Tutuila SWB2 water budget model
+#### 3: ASPA-UH-SWB2_REPO contains the needed data and code to run the Tutuila SWB2 water budget model
 
 [See Maps of Recharge and other Water Budget Components](ASPA-UH-SWB2_REPO/output)
 
-4: ASPA-UH-Flopy_REPO contains files and code to run MODFLOW based groundwater models using the data generated within other components of this framework
+#### 4: ASPA-UH-Flopy_REPO contains files and code to run MODFLOW based groundwater models using the data generated within other components of this framework
 
 [Check Out Different Groundwater Model Notebooks](ASPA-UH-Flopy_REPO/Models)
 
