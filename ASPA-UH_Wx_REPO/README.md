@@ -18,7 +18,7 @@ This Jupyter notebook script processes weather station data from 6 full weather 
 
 
 <p align="center">
-  <img width="500" height="400" src=/Docs/monitoring_instruments_small.jpg>
+  <img width="500" height="400" src=/ASPA-UH_Wx_REPO/Docs/monitoring_instruments_small.jpg>
 </p>
 
 
