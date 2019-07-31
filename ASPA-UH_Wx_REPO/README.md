@@ -11,7 +11,7 @@ To examine the script used to process weather station data and perform QA/QC pro
 
 This Jupyter notebook script processes weather station data from 6 full weather stations and one solar radiation station on Tutuila into a single consolidated dataset. For metadata and all other available information regarding these stations please see: 
 
-[Hydrologic Monitoring Network Handbook](Docs/Monitoring system report_FINAL.pdf)
+[Hydrologic Monitoring Network Handbook](Docs)
 
 
 
