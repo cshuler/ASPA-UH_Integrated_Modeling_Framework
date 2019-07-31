@@ -10,7 +10,7 @@ The framework has four descrete components:
 
 1: ASPA-UH_Wx_Sub-REPO contains data and code for processing and QA/Qc-ing raw weather station data
 
-[Download Processed Weather Station Data](ASPA-UH_Wx_REPO/workspace/QA_All_merged.csv)
+[Download Processed Weather Station Data (click "view raw")](ASPA-UH_Wx_REPO/workspace/QA_All_merged.csv)
 
 2: ASPA-UH_Stream_Sub-REPO contains data and code for processing, QA/Qc-ing, and automatically developing and updating rating curves from raw streamflow data
 
