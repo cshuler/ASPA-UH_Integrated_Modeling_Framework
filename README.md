@@ -18,7 +18,7 @@ The framework has four descrete components:
 
 #### 3: ASPA-UH-SWB2_REPO contains the needed data and code to run the Tutuila SWB2 water budget model
 
-[See Maps of Recharge and other Water Budget Components](ASPA-UH-SWB2_REPO/output)
+[See Maps of Recharge and other Water Budget Components](ASPA-UH-SWB2_REPO/output/Figures)
 
 #### 4: ASPA-UH-Flopy_REPO contains files and code to run MODFLOW based groundwater models using the data generated within other components of this framework
 
