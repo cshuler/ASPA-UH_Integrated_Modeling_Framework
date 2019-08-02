@@ -1,7 +1,6 @@
 # ASPA-UH_Integrated_Modeling_Framework
 
-A framework for, and a case study of a small scale, vertically integrated, collaborative groundwater modeling process that attepts to
-merge the fields of data-science and hydrology. This modeling framework applies an open-source, cloud-based, and process oriented paradigm to make modeling more accessible, transparent, reproducible, and stakeholder driven.
+A framework for, and a case study of a small scale, vertically integrated, collaborative groundwater modeling process that merges the fields of data-science and hydrology. This modeling framework applies an open-source, cloud-based, and process oriented paradigm to make modeling more accessible, transparent, reproducible, and stakeholder driven.
 
 
 We refer to this framework as vertically integrated because it includes a diverse chain of modular components extending from the direct collection and processing of basic hydrologic parameters, through to the development of a dynamic regional groundwater model.
