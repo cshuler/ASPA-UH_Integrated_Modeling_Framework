@@ -13,8 +13,7 @@ raster-based input data and generate the MODFLOW package files in required forma
 Implementation of the Tutuila groundwater modeling framework accomplished all pre-
 processing steps using FloPy or other Python modules within a dedicated Jupyter Notebook.
 FloPy also provides functionality to run the MODFLOW code, which needs to be downloaded as
-a separate executable file (https://water.usgs.gov/water-resources/software/MODFLOW-
-2005/MF2005.1_12.zip). FloPy runs MODFLOW as a sub-process and prints output directly to
+a separate executable file (https://water.usgs.gov/water-resources/software/MODFLOW-2005/MF2005.1_12.zip). FloPy runs MODFLOW as a sub-process and prints output directly to
 the notebook cell. Once the MODFLOW code is run and output files are saved, these can be
 accessed within the notebook for post-processing routines that display model output or conduct
 statistical analysis. The Tutuila groundwater model workflow currently includes definition of the
