@@ -12,3 +12,7 @@ dependencies:
   - rasterio
   - fiona
   - pyshp
+  - basemap 
+  - geopandas
+  - gdal 
+  - simplekml 

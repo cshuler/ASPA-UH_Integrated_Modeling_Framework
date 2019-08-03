@@ -17,3 +17,5 @@ dependencies:
   - scikit-learn
   - lmfit
   - xlrd
+  - geopandas
+  - descartes
