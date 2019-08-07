@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="feat_242">
+    <Document>
         <name>Head_contours</name>
         <open>1</open>
-        <Folder id="feat_243">
+        <Folder>
             <Style id="stylesel_210">
                 <LabelStyle id="substyle_421">
                     <colorMode>normal</colorMode>
