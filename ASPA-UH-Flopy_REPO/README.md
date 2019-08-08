@@ -21,3 +21,10 @@ statistical analysis. The Tutuila groundwater model workflow currently includes 
 required MODFLOW packages as well as those representing boundary conditions (.ghb),
 hydraulic conductivity zones (.lpf), head observations (.obs), spatially-resampled recharge rates
 (.rch) derived directly from SWB2, and salt-water interface predictions
+
+
+<!-- blank line -->
+<figure class="video_container">
+  <iframe src='https://www.mapchannels.com/mc5/27562/27562-testsuccess.htm?v=20190807113007' frameborder="0" allowfullscreen="true"></iframe>
+</figure>
+<!-- blank line -->
