@@ -57,7 +57,7 @@ This is a work in progress and is is subject to change, revision, or removal at 
 
 
 ##### This work is supported by
-- The University of Hawaii Water Resources Research Center through The National Institutes for water Resources grant numbers: 
+- The University of Hawaii Water Resources Research Center through The National Institutes for Water Resources grant numbers: 2015AS443B, 2015AS445B, 2018AS488B
 - U.S. Environmental Protection Agency Region IX through  The American Samoa Environmental Protection Agency grant number: C00543
 - Pacific Regional Integrated Sciences and Assessments (Pacific RISA) program grant number: NA15OAR4310146
 - and The American Samoa Power Authority through ratepayer supported funds
