@@ -1,17 +1,13 @@
-# ASPA-UH_Integrated_Modeling_Framework
+# ASPA-UH WRRC Integrated Modeling Framework
 
-By: 
+Developed By: 
 Christopher K. Shuler (1), Matamua Katrina E. Mariner (2), Aly El-Kadi (1)
 ###### (1) Water Resources Research Center and Department of Geology and Geophysics, University of Hawaii at Manoa  (2) American Samoa Power Authority, American Samoa USA
 
 A framework for, and a case study of a small scale, vertically integrated, collaborative groundwater modeling process that merges the fields of data-science and hydrology. This modeling framework applies an open-source, cloud-based, and process oriented paradigm to make modeling more accessible, transparent, reproducible, and stakeholder driven. We refer to this framework as vertically integrated because it includes a diverse chain of modular components extending from the direct collection and processing of basic hydrologic parameters, through to the development of a dynamic regional groundwater model.
 # 
-##### Please explore this repository, everything here is open-source and created for the betterment of humanity. If you are new to GitHub also consider exploring [This Website](https://integratedmodelingframework.weebly.com/) to learn more about the project.
+##### Please explore this repository! Everything here is open-source and created for the betterment of humanity. If you are new to GitHub also consider exploring [This Website](https://integratedmodelingframework.weebly.com/) to learn more about the project.
 # 
-
-
-
-
 
 
 The framework has four descrete components: 
@@ -44,12 +40,8 @@ The framework has four descrete components:
 Schematic of data and modeling workflow for the ASPA-UH-WRRC collaborative modeling framework. Datasets or geospatial layer components are shown in quadrilaterals, code-based processes are contained in ovals, and external model executables are contained in triangles, which are themselves within ovals since they are run as Python sub-processes.
 
 
-
-
-
-We are working on a website too:
+#### To continue exploring check out our website!
 https://integratedmodelingframework.weebly.com/
-
 
 &nbsp;
 
@@ -62,7 +54,7 @@ This work is provided as open-source software on the condition that its authors,
 This is a work in progress and is is subject to change, revision, or removal at the developers discression. No guarentee is made regarding the quality or accuracy of these data. While QA QC procedures have been applied to some data these procedures are still under development and subject to revision and any use of this data should be understood in this context.
 
 
-##### This work is supported by
+#### These projects are supported by
 - The University of Hawaii Water Resources Research Center through The National Institutes for Water Resources grant numbers: 2015AS443B, 2015AS445B, 2018AS488B
 - U.S. Environmental Protection Agency Region IX through  The American Samoa Environmental Protection Agency grant number: C00543
 - Pacific Regional Integrated Sciences and Assessments (Pacific RISA) program grant number: NA15OAR4310146
