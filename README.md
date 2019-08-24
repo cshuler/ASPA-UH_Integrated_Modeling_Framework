@@ -1,9 +1,18 @@
 # ASPA-UH_Integrated_Modeling_Framework
 
-A framework for, and a case study of a small scale, vertically integrated, collaborative groundwater modeling process that merges the fields of data-science and hydrology. This modeling framework applies an open-source, cloud-based, and process oriented paradigm to make modeling more accessible, transparent, reproducible, and stakeholder driven.
+By: 
+Christopher K. Shuler (1), Matamua Katrina E. Mariner (2), Aly El-Kadi (1)
+###### (1) Water Resources Research Center and Department of Geology and Geophysics, University of Hawaii at Manoa  (2) American Samoa Power Authority, American Samoa USA
+
+A framework for, and a case study of a small scale, vertically integrated, collaborative groundwater modeling process that merges the fields of data-science and hydrology. This modeling framework applies an open-source, cloud-based, and process oriented paradigm to make modeling more accessible, transparent, reproducible, and stakeholder driven. We refer to this framework as vertically integrated because it includes a diverse chain of modular components extending from the direct collection and processing of basic hydrologic parameters, through to the development of a dynamic regional groundwater model.
+# 
+##### Please explore this repository, everything here is open-source and created for the betterment of humanity. If you are new to GitHub also consider exploring [This Website](https://integratedmodelingframework.weebly.com/) to learn more about the project.
+# 
 
 
-We refer to this framework as vertically integrated because it includes a diverse chain of modular components extending from the direct collection and processing of basic hydrologic parameters, through to the development of a dynamic regional groundwater model.
+
+
+
 
 The framework has four descrete components: 
 
@@ -23,7 +32,7 @@ The framework has four descrete components:
 
 [Check Out Different Groundwater Model Notebooks](ASPA-UH-Flopy_REPO/Models)
 
-.............................................................................................................................................................................................................................................
+## How it all fits together
 
 <p align="center">
   <img width="650" height="325" src=Docs/Figures/Framework_Schematic1.jpg >
@@ -35,10 +44,7 @@ The framework has four descrete components:
 Schematic of data and modeling workflow for the ASPA-UH-WRRC collaborative modeling framework. Datasets or geospatial layer components are shown in quadrilaterals, code-based processes are contained in ovals, and external model executables are contained in triangles, which are themselves within ovals since they are run as Python sub-processes.
 
 
-By: 
-Christopher K. Shuler, Matamua Katrina E. Mariner, Aly El-Kadi
-1. Water Resources Research Center and Department of Geology and Geophysics, University of Hawaii at Manoa
-2. American Samoa Power Authority, American Samoa USA
+
 
 
 We are working on a website too:
