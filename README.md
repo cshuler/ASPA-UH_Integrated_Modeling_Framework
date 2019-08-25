@@ -31,7 +31,7 @@ The framework has four descrete components:
 
 &nbsp;
 
-## How it all fits together
+### How it all fits together
 
 <p align="center">
   <img width="650" height="325" src=Docs/Figures/Framework_Schematic1.jpg >
@@ -40,10 +40,10 @@ The framework has four descrete components:
 
 
 
-Schematic of data and modeling workflow for the ASPA-UH-WRRC collaborative modeling framework. Datasets or geospatial layer components are shown in quadrilaterals, code-based processes are contained in ovals, and external model executables are contained in triangles, which are themselves within ovals since they are run as Python sub-processes.
+Schematic of data and modeling workflow for the ASPA-UH-WRRC collaborative modeling framework. The SWB2 model is a water budget model originally developed by the USGS used to produce spatially distributed groundwater recharge data, and FloPy is a Python based MODFLOW groundwater model compiler used to predict groundwater heads and salinities on a regional scale.  Datasets or geospatial layer components are shown in quadrilaterals, code-based processes are contained in ovals, and external model executables are contained in triangles, which are themselves within ovals since they are run as Python sub-processes. All components, meaning all raw data, all modelign code, all model executables, and the most recent versions of results are included in this repository.
 
 
-#### Also don'nt forget to check out our website!
+#### Also don't forget to check out our website!
 https://integratedmodelingframework.weebly.com/
 
 &nbsp;
