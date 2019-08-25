@@ -5,8 +5,9 @@ Christopher K. Shuler (1), Matamua Katrina E. Mariner (2), Aly El-Kadi (1)
 ###### (1) Water Resources Research Center and Department of Geology and Geophysics, University of Hawaii at Manoa  (2) American Samoa Power Authority, American Samoa USA
 
 A framework for, and a case study of a small scale, vertically integrated, collaborative groundwater modeling process that merges the fields of data-science and hydrology. This modeling framework applies an open-source, cloud-based, and process oriented paradigm to make modeling more accessible, transparent, reproducible, and stakeholder driven. We refer to this framework as vertically integrated because it includes a diverse chain of modular components extending from the direct collection and processing of basic hydrologic parameters, through to the development of a dynamic regional groundwater model.
-# 
-##### Please explore this repository! Everything here is open-source and created for the betterment of humanity. If you are new to GitHub also consider exploring [This Website](https://integratedmodelingframework.weebly.com/) to learn more about the project.
+
+## Getting Started  
+This framework provides data, code, and documentation for a reseach scale hydrological modeling project. In genral, input data folders are kept separate from results (output data) folders, and code used to generate the outputs are all developed within Jupyter Notebooks. Thus, when exploring this repository, all models and data processing routines are denoted as **.ipynb** files. If you are new to GitHub also consider exploring [This Website](https://integratedmodelingframework.weebly.com/) to learn more about the project.
 # 
 
 
