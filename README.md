@@ -7,7 +7,7 @@ Christopher K. Shuler (1), Matamua Katrina E. Mariner (2), Aly El-Kadi (1)
 A framework for, and a case study of a small scale, vertically integrated, collaborative groundwater modeling process that merges the fields of data-science and hydrology. This modeling framework applies an open-source, cloud-based, and process oriented paradigm to make modeling more accessible, transparent, reproducible, and stakeholder driven. We refer to this framework as vertically integrated because it includes a diverse chain of modular components extending from the direct collection and processing of basic hydrologic parameters, through to the development of a dynamic regional groundwater model.
 
 ## Getting Started  
-This framework provides data, code, and documentation for a reseach scale hydrological modeling project. In genral, input data folders are kept separate from results (output data) folders, and code used to generate the outputs are all developed within Jupyter Notebooks. Thus, when exploring this repository, all models and data processing routines are denoted as **.ipynb** files. If you are new to GitHub also consider exploring [This Website](https://integratedmodelingframework.weebly.com/) to learn more about the project.
+This framework provides data, code, and documentation for a reseach scale hydrological modeling project. In genral, input data folders are kept separate from results (output data) folders, and code used to generate the outputs is developed within Jupyter Notebooks. Thus, when exploring this repository, all models and data processing routines can be found by searching for **.ipynb** files. If you are new to GitHub also consider exploring [This Website](https://integratedmodelingframework.weebly.com/) to learn more about what we are doing here.
 # 
 
 
@@ -41,7 +41,7 @@ The framework has four descrete components:
 Schematic of data and modeling workflow for the ASPA-UH-WRRC collaborative modeling framework. Datasets or geospatial layer components are shown in quadrilaterals, code-based processes are contained in ovals, and external model executables are contained in triangles, which are themselves within ovals since they are run as Python sub-processes.
 
 
-#### To continue exploring check out our website!
+#### Also don'nt forget to check out our website!
 https://integratedmodelingframework.weebly.com/
 
 &nbsp;
