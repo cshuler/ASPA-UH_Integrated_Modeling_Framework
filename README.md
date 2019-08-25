@@ -29,6 +29,8 @@ The framework has four descrete components:
 
 [Check Out Different Groundwater Model Notebooks](ASPA-UH-Flopy_REPO/Models)
 
+&nbsp;
+
 ## How it all fits together
 
 <p align="center">
