@@ -67,8 +67,13 @@ change streamflow hoboware Preferances
 general ->  Export Settings
 
 Change type to .csv
-DO NOT include 
-- line number column
-- plot title in headder
-- etc, all check boxes uncheccked please
+For check boxes
+- NO line number column
+- NO plot title in headder
+- NO fractional seconds
+- YES SEPARATE DATE AND TIME INTO TWO COLUMNS 
+- NO quotes or commas in headdings...
+- NO logger serial #
+- NO sensor serial #
+
 
