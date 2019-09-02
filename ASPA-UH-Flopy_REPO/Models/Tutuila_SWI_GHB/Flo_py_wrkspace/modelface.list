@@ -276,7 +276,7 @@
  Observation within a steady-state time step has been moved to the end of the time step.
     10 Obs_9            1    0.000       3.600    
  Observation within a steady-state time step has been moved to the end of the time step.
-    11 Obs_10           1    0.000       1.500    
+    11 Obs_10           1    0.000       2.430    
  Observation within a steady-state time step has been moved to the end of the time step.
     12 Obs_11           1    0.000       1.900    
  Observation within a steady-state time step has been moved to the end of the time step.
@@ -308,7 +308,7 @@
  Observation within a steady-state time step has been moved to the end of the time step.
     26 Obs_25           1    0.000       3.200    
  Observation within a steady-state time step has been moved to the end of the time step.
-    27 Obs_26           1    0.000       16.50    
+    27 Obs_26           1    0.000       16.85    
  Observation within a steady-state time step has been moved to the end of the time step.
     28 Obs_27           1    0.000       25.40    
  Observation within a steady-state time step has been moved to the end of the time step.
@@ -326,7 +326,7 @@
  Observation within a steady-state time step has been moved to the end of the time step.
     35 Obs_34           1    0.000       1.800    
  Observation within a steady-state time step has been moved to the end of the time step.
-    36 Obs_35           1    0.000       1.933    
+    36 Obs_35           1    0.000       1.628    
  Observation within a steady-state time step has been moved to the end of the time step.
     37 Obs_36           1    0.000      0.3000    
  Observation within a steady-state time step has been moved to the end of the time step.
@@ -13337,7 +13337,7 @@
  Obs_7           3.5000000000        3.1250030994       0.37499690056    
  Obs_8           1.2000000477        1.9441385269      -0.74413847923    
  Obs_9           3.5999999046        3.7572536469      -0.15725374222    
- Obs_10          1.5000000000        2.3946945667      -0.89469456673    
+ Obs_10          2.4298999310        2.3946945667       3.52053642273E-02
  Obs_11          1.8999999762        2.0799794197      -0.17997944355    
  Obs_12          1.2999999523        3.5815515518       -2.2815515995    
  Obs_13         0.89999997616        2.0034077168       -1.1034077406    
@@ -13353,7 +13353,7 @@
  Obs_23          5.7500000000        6.1587791443      -0.40877914429    
  Obs_24          34.200000763        6.8078045845        27.392196655    
  Obs_25          3.2000000477        5.6222734451       -2.4222733974    
- Obs_26          16.500000000        6.8852777481        9.6147222519    
+ Obs_26          16.853000641        6.8852777481        9.9677228928    
  Obs_27          25.399999619        6.4173183441        18.982681274    
  Obs_28          1.7999999523        5.3173046112       -3.5173046589    
  Obs_29          8.8000001907        5.2735266685        3.5264735222    
@@ -13362,7 +13362,7 @@
  Obs_32         0.60000002384       0.76831811666      -0.16831809282    
  Obs_33          20.299999237        5.9481568336        14.351842880    
  Obs_34          1.7999999523        4.2235331535       -2.4235332012    
- Obs_35          1.9333000183        3.8624873161       -1.9291872978    
+ Obs_35          1.6276999712        3.8624873161       -2.2347874641    
  Obs_36         0.30000001192        2.3778536320       -2.0778536797    
  Obs_37         0.50000000000       0.56246680021      -6.24668002129E-02
  Obs_38          1.0000000000        1.7663109303      -0.76631093025    
@@ -13392,8 +13392,8 @@
  Obs_62          3.0000000000       0.30700749159        2.6929924488    
  Obs_63          5.6999998093       0.18675194681        5.5132479668    
 
- HEAD/DRAWDOWN SUM OF SQUARED DIFFERENCE:    7.02914E+03
+ HEAD/DRAWDOWN SUM OF SQUARED DIFFERENCE:    7.03653E+03
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2019/08/27 15:06:44
- Elapsed run time:  2 Minutes,  6.717 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2019/09/01 14:20:06
+ Elapsed run time:  2 Minutes,  0.690 Seconds
 
