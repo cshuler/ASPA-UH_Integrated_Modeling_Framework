@@ -12,3 +12,55 @@ period 1 step 40
   save head
   print budget
 
+period 1 step 60 
+  save head
+  print budget
+
+period 1 step 80 
+  save head
+  print budget
+
+period 1 step 100 
+  save head
+  print budget
+
+period 1 step 120 
+  save head
+  print budget
+
+period 1 step 140 
+  save head
+  print budget
+
+period 1 step 160 
+  save head
+  print budget
+
+period 1 step 180 
+  save head
+  print budget
+
+period 1 step 200 
+  save head
+  print budget
+
+period 1 step 220 
+  save head
+  print budget
+
+period 1 step 240 
+  save head
+  print budget
+
+period 1 step 260 
+  save head
+  print budget
+
+period 1 step 280 
+  save head
+  print budget
+
+period 1 step 300 
+  save head
+  print budget
+

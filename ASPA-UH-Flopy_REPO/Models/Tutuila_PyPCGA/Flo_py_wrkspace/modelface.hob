@@ -11,7 +11,7 @@ Obs_6                   1         74         55          1                  0.0 
 Obs_7                   1         70         56          1                  0.0     0.0000     0.0000     3.5000   # DATASET 3 - Observation 8
 Obs_8                   1         77         57          1                  0.0     0.0000     0.0000     1.2000   # DATASET 3 - Observation 9
 Obs_9                   1         70         59          1                  0.0     0.0000     0.0000     3.6000   # DATASET 3 - Observation 10
-Obs_10                  1         76         60          1                  0.0     0.0000     0.0000     1.5000   # DATASET 3 - Observation 11
+Obs_10                  1         76         60          1                  0.0     0.0000     0.0000     2.4299   # DATASET 3 - Observation 11
 Obs_11                  1         79         69          1                  0.0     0.0000     0.0000     1.9000   # DATASET 3 - Observation 12
 Obs_12                  1         72         71          1                  0.0     0.0000     0.0000     1.3000   # DATASET 3 - Observation 13
 Obs_13                  1         79         71          1                  0.0     0.0000     0.0000     0.9000   # DATASET 3 - Observation 14
@@ -27,7 +27,7 @@ Obs_22                  1         58         78          1                  0.0 
 Obs_23                  1         59         78          1                  0.0     0.0000     0.0000     5.7500   # DATASET 3 - Observation 24
 Obs_24                  1         54         79          1                  0.0     0.0000     0.0000    34.2000   # DATASET 3 - Observation 25
 Obs_25                  1         60         79          1                  0.0     0.0000     0.0000     3.2000   # DATASET 3 - Observation 26
-Obs_26                  1         52         80          1                  0.0     0.0000     0.0000    16.5000   # DATASET 3 - Observation 27
+Obs_26                  1         52         80          1                  0.0     0.0000     0.0000    16.8530   # DATASET 3 - Observation 27
 Obs_27                  1         57         80          1                  0.0     0.0000     0.0000    25.4000   # DATASET 3 - Observation 28
 Obs_28                  1         60         80          1                  0.0     0.0000     0.0000     1.8000   # DATASET 3 - Observation 29
 Obs_29                  1         59         81          1                  0.0     0.0000     0.0000     8.8000   # DATASET 3 - Observation 30
@@ -36,7 +36,7 @@ Obs_31                  1         65         81          1                  0.0 
 Obs_32                  1         84         81          1                  0.0     0.0000     0.0000     0.6000   # DATASET 3 - Observation 33
 Obs_33                  1         56         82          1                  0.0     0.0000     0.0000    20.3000   # DATASET 3 - Observation 34
 Obs_34                  1         62         82          1                  0.0     0.0000     0.0000     1.8000   # DATASET 3 - Observation 35
-Obs_35                  1         64         82          1                  0.0     0.0000     0.0000     1.9333   # DATASET 3 - Observation 36
+Obs_35                  1         64         82          1                  0.0     0.0000     0.0000     1.6277   # DATASET 3 - Observation 36
 Obs_36                  1         68         85          1                  0.0     0.0000     0.0000     0.3000   # DATASET 3 - Observation 37
 Obs_37                  1         76         88          1                  0.0     0.0000     0.0000     0.5000   # DATASET 3 - Observation 38
 Obs_38                  1         63         89          1                  0.0     0.0000     0.0000     1.0000   # DATASET 3 - Observation 39

@@ -11,6 +11,8 @@ class Model:
         self.homedir = os.path.abspath('./')
         self.deletedir = True
 
+        from psutil import cpu_count  # physcial cpu counts
+        self.ncores = cpu_count(logical=False)
 
         if params is not None:
             if 'deletedir' in params:
@@ -20,20 +22,21 @@ class Model:
             if 'ncores' in params:
                 self.ncores = params['ncores']
 
-            self.mf_exec = params['mf_exec']
-            self.Lx = params['Lx']
-            self.Ly = params['Ly']
-            self.Q  = params['Q']
-            self.Rch  = params['Rch']
+            self.delr = params['delr']
+            self.delc = params['delc']
             self.nlay = params['nlay']
             self.nrow = params['nrow']
             self.ncol = params['ncol']
-            self.ztop = params['ztop']
-            self.zbot = params['zbot']
+            self.botm = params['botm']
             self.obs_locmat = params['obs_locmat']
-            self.Q_locs = params['Q_locs']
-            self.input_dir = params['input_dir']
+            self.nobs = params['nobs']
+            self.layervals = params['layervals']
+            self.rowvals = params['rowvals']
+            self.colvals = params['colvals']
+            self.obsvals = params['obsvals']
+            self.obsnames = params['obsnames']
             self.sim_dir = './simul' if 'sim_dir' not in params else params['sim_dir']
+
         else:
             raise ValueError("You have to provide relevant MODFLOW-FloPy parameters")
 
@@ -53,111 +56,115 @@ class Model:
 
         return mydir
 
-    def run_model_single(self, logHK, Q_loc, idx = 0):
+    def run_model_single(self, logHK, idx = 0):
         '''run modflow
         '''
-
-        if not isinstance(Q_loc[0],(int,np.integer)):
-            raise TypeError("Expected int for Q_loc[0], got %s" % (type(Q_loc[0]),))
-        if not isinstance(Q_loc[1],(int,np.integer)):
-            raise TypeError("Expected int for Q_loc[1], got %s" % (type(Q_loc[1]),))
-        if not isinstance(Q_loc[2],(int,np.integer)):
-            raise TypeError("Expected int for Q_loc[2], got %s" % (type(Q_loc[1]),))
-
+        
         mydir = self.create_dir(idx)
         while not os.path.exists(mydir): # for windows..
             mydir = self.create_dir(idx)
         #self.create_dir(idx)
 
-        Lx = self.Lx;Ly = self.Ly
-        Q = self.Q; Rch = self.Rch
-        nlay = self.nlay; nrow = self.nrow; ncol = self.ncol
-        ztop = self.ztop; zbot = self.zbot
-        HK = (np.exp(logHK)).reshape(nlay,nrow,ncol)
+        laytyp = 0
+        vka = 10
+        xll = 515244
+        yll = 8410178
+		
+        HK = (np.exp(logHK)).reshape(self.nlay,self.nrow,self.ncol)
+		
+        exe_name = 'mf2005'
 
-        obs_locmat = np.copy(self.obs_locmat)
+        txtspace = os.path.join('Txt_inputs') 
+
+        # model run times and stress period data
+        Number_of_years = 100                           # number of years to run the model,
+        nper = 1                                        # Number of model stress periods default is 1
+        perlen = [365.25*Number_of_years]               # array of the stress period lengths in days separated by commas
+        nstp = [Number_of_years]                        # Number of time steps in each stress period (default is 1 per year).           
+        tsmult = 1                                      # Time step multiplier, can be 
+        steady = True
+
+        # output control parameters
+        Save_every_how_many_steps = 20                  # essentially used for 
+        spd = {}
+        for istp in range(Save_every_how_many_steps-1, nstp[0]+1, Save_every_how_many_steps):   # format the above for modflow 
+            spd[(0, istp)] = ['save head', 'print budget']
+            spd[(0, istp+1)] = []
+
+        # load  arrays
+        top = np.loadtxt(os.path.join(txtspace, "top.txt"))
+        final_ibound = np.loadtxt(os.path.join(txtspace,  "final_ibound.txt"))
+        ihead = np.loadtxt(os.path.join(txtspace,  "ihead.txt"))
+        
+        recharge_converted = np.loadtxt(os.path.join(txtspace,  "recharge_converted.txt"))   
+        ghb_geometry = np.loadtxt(os.path.join(txtspace, "ghb_geometry.txt"))   
+        # fix some inputs
+        rch_data = {0: recharge_converted}   # dictionary form to specify that it is only on first layer    
+
+        ### GHb part 
+        nghb = int(np.sum(ghb_geometry))     # this is the total number of General head cells in the model
+        colcell, rowcell = np.meshgrid(np.arange(0, self.ncol), np.arange(0, self.nrow))  # make mesh grid lists of all the dell indexes 
+        lrchc = np.zeros((nghb, 5))       # layer(int), row(int), column(int), 
+        lrchc[:, 0] = 0                                    # give it layer 1
+        lrchc[:, 1] = rowcell[ghb_geometry == 1]           # assign the specific row numbers for the active ghb cells
+        lrchc[:, 2] = colcell[ghb_geometry == 1]           # assign the specific col numbers for the active ghb cells
+        lrchc[:, 3] = .01                                  # this is the starting head value, maybe change to 1?
+        lrchc[:, 4] = 62.5                   # this is conductance values, probably change later
+        # create ghb dictionary
+        ghb_data = {0:lrchc}
+
 
         modelname = 'mf'
 
-        exec_name = os.path.abspath(os.path.join(self.homedir, self.input_dir, self.mf_exec))
-        mymf = flopy.modflow.Modflow(modelname=modelname, exe_name=exec_name, model_ws=mydir)
+        ml = flopy.modflow.Modflow(modelname, version='mf2005', exe_name=exe_name, model_ws=mydir, verbose=False)
 
-        delr = Lx / ncol
-        delc = Ly / nrow
-        delv = (ztop - zbot) / nlay
-        botm = np.linspace(ztop, zbot, nlay + 1)
+        discret = flopy.modflow.ModflowDis(ml, nlay=self.nlay, nrow=self.nrow, ncol=self.ncol, laycbd=0,
+                                           delr=self.delr, delc=self.delc, top=top, botm=self.botm,
+                                           nper=nper, perlen=perlen, nstp=nstp, tsmult=tsmult)
 
-        # Create the discretization object
-        dis = flopy.modflow.ModflowDis(mymf, nlay, nrow, ncol, delr=delr, delc=delc,top=ztop, botm=botm[1:])
+        bas = flopy.modflow.ModflowBas(ml, ibound=final_ibound, strt=ihead)
+        lpf = flopy.modflow.ModflowLpf(ml, laytyp=laytyp, hk=HK, vka=vka)
+        rch = flopy.modflow.ModflowRch(ml, rech=rch_data)
+        oc = flopy.modflow.ModflowOc(ml, stress_period_data=spd)
+        pcg = flopy.modflow.ModflowPcg(ml, hclose=1.0e-6, rclose=3.0e-3, mxiter=100, iter1=50)
+        ghb = flopy.modflow.ModflowGhb(ml, stress_period_data=ghb_data)
+        
+          # water level observations
+        obs_data= []
+        for i in range(0,self.nobs):
+            obsva = flopy.modflow.HeadObservation(ml, obsname=self.obsnames[i], 
+                                                layer=self.layervals[i], row=self.rowvals[i], column=self.colvals[i],
+                                                time_series_data=[[0,self.obsvals[i]]])
+            obs_data.append(obsva)       
+        hob = flopy.modflow.ModflowHob(ml, iuhobsv = 7, hobdry=-999, obs_data = obs_data)
 
-        # Variables for the BAS package
-        ibound = np.ones((nlay, nrow, ncol), dtype=np.int32)
-        ibound[:, :, 0] = -1
-        ibound[:, :, -1] = -1
-        strt = np.ones((nlay, nrow, ncol), dtype=np.float32)
-        strt[:, :, 0] = 120.
-        strt[:, :, -1] = 110.
-        bas = flopy.modflow.ModflowBas(mymf, ibound=ibound, strt=strt)
 
-        # Add LPF package
-        lpf = flopy.modflow.ModflowLpf(mymf, hk=HK, vka=HK, ipakcb=53)
+        ml.write_input()
+        ml.run_model(silent=False)
 
-        # Add RCH package
-        flopy.modflow.mfrch.ModflowRch(mymf, nrchop=3, rech=0.001)
-        # Add WEL package
-        # Remember to use zero-based layer, row, column indices!
-        wel_sp = [[Q_loc[0], Q_loc[1], Q_loc[2], Q]]  # lay, row, col index, pumping rate
-        stress_period_data = {0: wel_sp}  # define well stress period {period, well info dictionary}
-        wel = flopy.modflow.ModflowWel(mymf, stress_period_data=stress_period_data)
+        observations = np.loadtxt(os.path.join(mydir, '{}.hob.out'.format(modelname)), skiprows=1, usecols=[0,1])      
+        comp_obs = np.ravel(np.split(observations, 2, 1)[0]) # the computed hed values at the obspts
+        obs_obs = np.ravel(np.split(observations, 2, 1)[1]) # the observed hed values at the obspts
 
-        # Add OC package
-        spd = {(0, 0): ['save head']}
-        oc = flopy.modflow.ModflowOc(mymf, stress_period_data=spd, compact=True)
-
-        # Add PCG package to the MODFLOW model
-        pcg = flopy.modflow.ModflowPcg(mymf)
-
-        while not os.path.exists(mydir): # for windows..
-            mydir = self.create_dir(idx)
-
-        # Write the MODFLOW model input files
-        mymf.write_input()
-
-        # Run the MODFLOW model
-        success, buff = mymf.run_model(silent=True)
-
-        ##get the measurement locations
-        hds = bf.HeadFile(os.path.join(mydir,modelname + '.hds'))
-        times = hds.get_times()  # simulation time, steady state
-        head = hds.get_data(totim=times[-1])
-
-        obs_locmat[Q_loc] = False # don't count head at pumping well
-        simul_obs = head[obs_locmat]
-        simul_obs = simul_obs.reshape(-1) # 1d array
-        hds.close()
-
+        simul_obs = comp_obs 
+        
         if self.deletedir:
             rmtree(mydir, ignore_errors=True)
             #rmtree(sim_dir)
         #return H_meas.dot(x_dummy)
+        
         return simul_obs
 
-
+    
+    
     def run_model(self, HK, idx = 0):
         '''run adh
         '''
-        Q_locs = self.Q_locs
-        kk = 0
-        for Q_loc in Q_locs:
-            if kk == 0:
-                simul_obs = self.run_model_single(HK, Q_loc, idx)
-            else:
-                simul_obs = np.hstack((simul_obs,self.run_model_single(HK, Q_loc, idx)))
-            kk = kk + 1
-
+        simul_obs = self.run_model_single(HK,  idx)
+           
         return simul_obs # 1d array
 
-
+    
     def run(self, HK, par, ncores=None):
         if ncores is None:
             ncores = self.ncores
@@ -185,44 +192,75 @@ class Model:
     # return self.run_model(self,bathy,idx)
     # def run_in_parallel(self,args):
     #    return args[0].run_model(args[1], args[2])
+    
+    
+
+'''    
+Not sure how to code this
 
 if __name__ == '__main__':
     import numpy as np
     #from time import time
     import mf
 
-    # parameters
-    if os.name == 'nt':
-        mf_exec = 'mf2005.exe'
-    else:
-        mf_exec = 'mf2005'
 
-    # location of mf2005 executable
-    input_dir = "./input_files"
-    sim_dir = './simul'
-    Lx = 1000.; Ly = 750.
-    Q = 25.; Rch = 0.001
-    nlay = 1; nrow = 75; ncol = 100
-    ztop = 0.; zbot = -1.
 
-    obs_locmat = np.zeros((nlay, nrow, ncol), np.bool)
-    for i in range(5,71,16):
-        for j in range(9,96,16):
-            obs_locmat[0, i, j] =  1
 
-    Q_locs_idx = np.where(obs_locmat == True)
-    Q_locs = []
-    #Q_locs.append((Q_locs_idx[0][0], Q_locs_idx[1][0], Q_locs_idx[2][0]))
-    for Q_loc in zip(Q_locs_idx[0], Q_locs_idx[1], Q_locs_idx[2]):
-        Q_locs.append(Q_loc)
+    # params to pass to Model class
+    delr = 169 
+    delc = 165
+    nlay = 1
+    nrow = 100
+    ncol = 200
+    botm = -1250
 
-    mf_params = {'mf_exec': mf_exec, 'input_dir': input_dir,
-              'sim_dir': sim_dir,
-              'Lx': Lx,'Ly': Ly,
-              'Q': Q, 'Rch': Rch,
+        # Pre-development water levels spreadsheet. Compiled from drillers logs and pump tests
+    # monitoring well data from this  integrated framework. 
+    MON_WELL_MEASUREMENT_SHEET = os.path.join("..", "..", 'Static_Data_Storage', "Ave_WL_MSL_m_mon_wells.csv")
+    PREDEVELOP_WLS_2_CSV = os.path.join("..", "..", 'Static_Data_Storage', 'GIS','Predevelop_WLs_2.csv')
+    Pdevel_WLs = pd.read_csv(PREDEVELOP_WLS_2_CSV)
+
+    xll = 515244    # hard code too
+    yll = 8410178
+
+    # Just stick on the data from the measured monitoring wells (it will average both values if repeated)
+    Mon_well_WLs = pd.read_csv(MON_WELL_MEASUREMENT_SHEET) 
+    del Mon_well_WLs['Well_num']
+    Pdevel_WLs = Pdevel_WLs.append(Mon_well_WLs, sort=False)
+
+    Pdevel_WLs['row_num'] = Pdevel_WLs['x_utm'].apply(lambda x_utm_val: math.ceil((x_utm_val-xll)/delr) )          
+    Pdevel_WLs['col_num'] = Pdevel_WLs['y_utm'].apply(lambda y_utm_val: (1+nrow)-math.ceil((y_utm_val-yll)/delc) )   
+    Pdevel_WLs['rowcol']  = list(zip(Pdevel_WLs.row_num, Pdevel_WLs.col_num))                                     
+
+    # This takes obs wells that occupy the same cell and averages them! 
+    Unique_WLs = Pdevel_WLs.groupby('rowcol', as_index=False).mean()                                               
+
+    # make new unique names for each obs point
+    Unique_WLs["name"] = "Obs_"+Unique_WLs.index.map(str)
+
+    nobs = len(Unique_WLs['WL_m_MSL']) 
+    layervals = [0] * nobs
+    rowvals = list(Unique_WLs['col_num'].astype(int))
+    colvals = list(Unique_WLs['row_num'].astype(int))
+    obsvals = list(Unique_WLs['WL_m_MSL'])
+    obsnames = list(Unique_WLs["name"])
+
+    obs_locmat = np.asarray(obsvals)
+    
+
+    mf_params = {'layervals': layervals, 'rowvals': rowvals,
+              'colvals': colvals, 'obsvals':obsvals, 'obsnames':obsnames,
+              'delr': delr, 'delc': delc,
               'nlay': nlay, 'nrow': nrow, 'ncol': ncol,
-              'zbot': zbot, 'ztop': ztop,
-              'obs_locmat':obs_locmat, 'Q_locs':Q_locs}
+              'botm': botm, 'obs_locmat': obs_locmat}
+    
+    
+    
+    
+    
+    
+    
+ ###HOW DEAL WITH THIS? 
 
     logHK = np.loadtxt('true_logK.txt')
     logHK = np.array(logHK).reshape(-1, 1) # make it m x 1 2D array
@@ -258,3 +296,4 @@ if __name__ == '__main__':
     # print(simul_obs_all)
 
     simul_obs = mymodel.run(logHK,par)
+'''
