@@ -1,4 +1,7 @@
+[![npm](https://zenodo.org/badge/181068976.svg)]()
+
 # ASPA-UH WRRC Integrated Modeling Framework
+
 
 Developed By: 
 Christopher K. Shuler (1), Matamua Katrina E. Mariner (2), Aly El-Kadi (1)
