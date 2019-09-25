@@ -1,4 +1,5 @@
-[![npm](https://zenodo.org/badge/181068976.svg)]()
+[![DOI](https://zenodo.org/badge/181068976.svg)](https://zenodo.org/badge/latestdoi/181068976)
+
 
 # ASPA-UH WRRC Integrated Modeling Framework
 
