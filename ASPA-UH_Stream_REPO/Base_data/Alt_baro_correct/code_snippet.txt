@@ -1,0 +1,25 @@
+# Hourly Airport Data  (junkshow)
+
+from: https://www.ncdc.noaa.gov/cdo-web/datasets/LCD/stations/WBAN:61705/detail
+
+Probably wont use for SWAT, but will be useul to pull out pressure data for baro corrections
+
+
+path_PPG_data = os.path.join("..", "Data", 'External_weather_data', 'PPG', "hourly")                # open dataset
+a = pd.read_csv(os.path.join(path_PPG_data, 'PPG_2010-2019(oct)-hourly.csv'), usecols = [1,2,3, 43, 44, 48, 51, 54, 56])  # cut out rando columns
+a.HourlyPrecipitation = a.HourlyPrecipitation.replace({"T": .001})              
+a = a[a['REPORT_TYPE'] == 'FM-15']                                       # apparently the hourly data we want is codes as FM-15 Data
+a['DATE'] = pd.to_datetime(a['DATE'], errors='coerce')                   # string date to real date
+a['DATE'] = a['DATE'].dt.round('H')                                      # timestamps are in rando near hour times, round to the hour
+a = a.set_index('DATE')
+del a['REPORT_TYPE']
+del a['SOURCE']
+PPG_Data = a.apply(pd.to_numeric, errors='coerce')                       # convert all columns of DataFrame to floats, turns any non-numerics to nan
+
+# if you want to resample to daily values (probably wont use, will use daily airport data from other source (http://scacis.rcc-acis.org/)
+#PPG_Data_rn = PPG_Data['HourlyPrecipitation'].resample('D').sum()      # resample the rain different than the other columns
+#PPG_Data_others = PPG_Data[['HourlyDryBulbTemperature','HourlyRelativeHumidity', 'HourlyStationPressure', 'HourlyWindDirection', 'HourlyWindSpeed']].resample('D').mean()   
+#PPG_Data = PPG_Data_others.join(PPG_Data_rn)                 #merge them back together
+
+fig, ax, = plt.subplots()
+PPG_Data['HourlyStationPressure'].plot()
