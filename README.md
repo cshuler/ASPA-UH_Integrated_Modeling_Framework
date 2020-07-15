@@ -47,10 +47,13 @@ The framework has four descrete components:
 Schematic of data and modeling workflow for the ASPA-UH-WRRC collaborative modeling framework. The SWB2 model is a water budget model originally developed by the USGS used to produce spatially distributed groundwater recharge data, and FloPy is a Python based MODFLOW groundwater model compiler used to predict groundwater heads and salinities on a regional scale.  Datasets or geospatial layer components are shown in quadrilaterals, code-based processes are contained in ovals, and external model executables are contained in triangles, which are themselves within ovals since they are run as Python sub-processes. All components, meaning all raw data, all modelign code, all model executables, and the most recent versions of results are included in this repository.
 
 
-#### Also don't forget to check out our website!
+#### Don't forget to check out our website!
 https://integratedmodelingframework.weebly.com/
 
 &nbsp;
+
+#### Additionally our recent open-access article, "Collaborative groundwater modeling: Open-source, cloud-based, applied science at a small-island water utility scale" published in Environmental Modeling and Software can be found [Here!](https://www.sciencedirect.com/science/article/pii/S136481521930934X)
+or download the pdf from this repository [here](Docs/1-s2.0-S136481521930934X-main.pdf)
 
 
 &nbsp;
