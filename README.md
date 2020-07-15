@@ -17,11 +17,11 @@ This framework provides data, code, and documentation for a reseach scale hydrol
 
 The framework has four descrete components: 
 
-#### 1: ASPA-UH_Wx_Sub-REPO contains data and code for processing and QA/Qc-ing raw weather station data
+#### 1: ASPA-UH_Wx_Sub-REPO contains data and code for processing and QA/QC-ing raw weather station data
 
 [Download Processed Weather Station Data (click "view raw")](ASPA-UH_Wx_REPO/workspace/QA_All_merged.csv)
 
-#### 2: ASPA-UH_Stream_Sub-REPO contains data and code for processing, QA/Qc-ing, and automatically developing and updating rating curves from raw streamflow data
+#### 2: ASPA-UH_Stream_Sub-REPO contains data and code for processing, QA/QC-ing, and automatically developing and updating rating curves from raw streamflow data
 
 [Download Processed Streamflow Data](ASPA-UH_Stream_REPO/workspace)
 
@@ -52,7 +52,7 @@ https://integratedmodelingframework.weebly.com/
 
 &nbsp;
 
-#### Additionally our recent open-access article, "Collaborative groundwater modeling: Open-source, cloud-based, applied science at a small-island water utility scale" published in Environmental Modeling and Software can be found [Here!](https://www.sciencedirect.com/science/article/pii/S136481521930934X)
+#### Additionally our recent open-access article, *"Collaborative groundwater modeling: Open-source, cloud-based, applied science at a small-island water utility scale"* published in Environmental Modeling and Software can be found [Here!](https://www.sciencedirect.com/science/article/pii/S136481521930934X)
 or download the pdf from this repository [here](Docs/1-s2.0-S136481521930934X-main.pdf)
 
 
