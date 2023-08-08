@@ -1,0 +1,33 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: ASPA-UH_Integrated_Modeling_Framework
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Christopher
+    family-names: Shuler
+  - given-names: Matamua Katrina
+    family-names: 'Mariner '
+  - family-names: El-Kadi
+    given-names: Aly
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.3460214
+repository-code: >-
+  https://github.com/cshuler/ASPA-UH_Integrated_Modeling_Framework
+abstract: >-
+  A framework for, and a case study of a small scale,
+  vertically integrated, collaborative groundwater modeling
+  process that merges the fields of data-science and
+  hydrology. This modeling framework applies an open-source,
+  cloud-based, and process oriented paradigm to make
+  modeling more accessible, transparent, reproducible, and
+  stakeholder driven. We refer to this framework as
+  vertically integrated because it includes a diverse chain
+  of modular components extending from the direct collection
+  and processing of basic hydrologic parameters, through to
+  the development of a dynamic regional groundwater model.
